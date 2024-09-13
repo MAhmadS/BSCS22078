@@ -2,23 +2,23 @@
     --primary: black;
     --background: #16423C;
     --secondary: #E9EFEC;
-    --highlight: #6A9C89;
+    --highlight: #507265;
     --border: #E9EFEC;
 }
 
 body{
-    font-family: sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--secondary);
 }
 
 header{
     border: 1px solid var(--border);
-    
-    background-image: url("./assets/background-pattern.jpg");
     background-size: auto;
 }
 
 .profile-section{
     color: var(--secondary);
+    background-image: url("./assets/background-pattern.jpg");
 
     display: flex;
     flex-direction: column;
@@ -34,6 +34,9 @@ header{
     align-items: center;
 
     text-align: center;
+    font-size: larger;
+
+    text-shadow: 0.2rem 0.2rem 0rem var(--background);
 }
 
 .profile-section div *{
@@ -41,16 +44,18 @@ header{
 }
 
 .profile-section img{
-    height: 200px;
-    width: 200px;
+    height: 12.5rem;
+    width: 12.5rem;
 
-    border: 2px solid var(--border);
+    border: 0.1rem solid var(--border);
     border-radius: 6rem;
 }
 
 .navbar ul{
+    background-color: var(--highlight);
     list-style-type: none;
     padding: 0;
+    margin: 0;
 
     display: flex;
     align-items: center;
@@ -74,7 +79,7 @@ header{
     text-decoration: none;
 }
 
-@media (min-width: 660px) {
+@media (min-width: 450px) {
     header{
         background-size: cover;
     }
@@ -82,17 +87,15 @@ header{
         flex-direction: row;
         justify-content: space-evenly;
     }
+    .profile-section img{
+        border-radius: 2rem;
+    }
     .navbar ul{
-        list-style-type: none;
-        padding: 0;
-    
-        display: flex;
+        padding: 0.5rem 0;
+
         justify-content: center;
-        align-items: center;
         flex-direction: row;
         gap: 0;
-    
-        font-weight: 600;
     }
     
     .navbar li:not(:last-child){
