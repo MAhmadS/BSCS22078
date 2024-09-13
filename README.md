@@ -1,3 +1,3 @@
 # BSCS22078
-###Web Dev and Design
-Assignment 1
+
+Web Design and Development Assignments
