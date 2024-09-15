@@ -242,6 +242,8 @@ footer {
     width: 160px;
   }
   .navbar ul {
+    font-size: large;
+
     padding: 0.5rem 0;
 
     justify-content: center;
@@ -271,5 +273,14 @@ footer {
   section span {
     align-self: center;
     width: 80%;
+  }
+  .list h5{
+    font-size: large;
+  }
+  .list *{
+    font-size: medium;
+  }
+  .list p {
+    font-weight: normal;
   }
 }
