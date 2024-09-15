@@ -1,13 +1,15 @@
 :root{
-    --primary: black;
+    --primary: #16423C;
     --background: #16423C;
-    --secondary: #E9EFEC;
+    --secondary: #E7F0DC;
     --highlight: #507265;
     --border: #E9EFEC;
+    --accent: #E7F0DC;
 }
 
 body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--primary);
+    font-family: 'Poppins', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: var(--secondary);
 }
 
@@ -17,26 +19,19 @@ header{
 }
 
 .profile-section{
-    color: var(--secondary);
-    background-image: url("./assets/background-pattern.jpg");
-
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 1rem;
     
     padding: 1rem;
+    overflow: hidden;
 }
 
 .profile-section div{
     display: flex;
     flex-direction: column;
-    align-items: center;
 
-    text-align: center;
-    font-size: larger;
-
-    text-shadow: 0.2rem 0.2rem 0rem var(--background);
+    font-size: small;
 }
 
 .profile-section div *{
@@ -44,11 +39,8 @@ header{
 }
 
 .profile-section img{
-    height: 12.5rem;
-    width: 12.5rem;
-
-    border: 0.1rem solid var(--border);
-    border-radius: 6rem;
+    height: 100px;
+    width: 100px;
 }
 
 .navbar ul{
@@ -79,7 +71,37 @@ header{
     text-decoration: none;
 }
 
-@media (min-width: 450px) {
+section{
+    margin-top: 30px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+    overflow: hidden;
+}
+
+section > div{    
+    text-align: center;
+
+    font-size: large;
+    font-weight: bold;
+    
+    padding: 5px;
+    width: 100%;
+
+    border-bottom: 2px solid var(--background);
+}
+
+iframe{
+    border: 2px solid var(--background);
+
+    height: 200px;
+    width: 100%;
+}
+
+@media (min-width:600px) {
     header{
         background-size: cover;
     }
@@ -105,5 +127,9 @@ header{
         border-top: 0;
         width: auto;
         padding: 0;
+    }
+    iframe{
+        height: 315px;
+        width: 520px;
     }
 }
