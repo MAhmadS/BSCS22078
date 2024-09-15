@@ -4,7 +4,7 @@
     --secondary: #E7F0DC;
     --highlight: #507265;
     --border: #E9EFEC;
-    --accent: #E7F0DC;
+    --accent: #c5d1b8;
 }
 
 body{
@@ -76,13 +76,12 @@ section{
     
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 1rem;
     
     overflow: hidden;
 }
 
-section > div{    
+section > div:first-child{    
     text-align: center;
 
     font-size: large;
@@ -101,12 +100,6 @@ iframe{
     width: 100%;
 }
 
-.skills > div:not(:first-child){
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
 .accordion-btn {
     color: var(--secondary);
 
@@ -116,6 +109,7 @@ iframe{
     background-color: var(--highlight);
     cursor: pointer;
 
+    margin: 0;
     padding: 1rem;
     width: 100%;
 
@@ -142,6 +136,8 @@ iframe{
 
     background-color: transparent;
     border: 2px solid var(--highlight);
+    margin: 0;
+    width: 100% - 2px;
 
     display: none;
     overflow: hidden;
@@ -151,6 +147,18 @@ iframe{
     margin: 0;
     padding: 0.25rem;
     border-bottom: 1px solid var(--highlight);
+  }
+
+  .list{
+    padding: 0.5rem 1rem;
+    background-color: var(--accent);
+  }
+  .list *{
+    margin: 0;
+  }
+  .list p{
+    font-size: small;
+    font-weight: normal;
   }
 
 @media (min-width:600px) {
