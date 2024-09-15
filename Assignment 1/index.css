@@ -1,6 +1,5 @@
 :root {
   --primary: #16423c;
-  --background: #16423c;
   --secondary: #e7f0dc;
   --highlight: #507265;
   --border: #e9efec;
@@ -107,12 +106,12 @@ section div:first-child {
   padding: 5px;
   width: 100%;
 
-  border-bottom: 2px solid var(--background);
+  border-bottom: 2px solid var(--highlight);
 }
 
 iframe {
   margin: 3px;
-  border: 3px solid var(--background);
+  border: 3px solid var(--highlight);
 
   height: 200px;
   width: 100% -3px;
@@ -218,6 +217,16 @@ footer {
   text-decoration: none;
 
   box-shadow: 0.1rem 0.1rem 0.1rem var(--primary);
+}
+
+.role{
+  border-top: 1px solid var(--highlight);
+  margin-top: 0.75rem;
+  font-weight: bold !important;
+}
+
+.role-text{
+  font-weight: normal;
 }
 
 @media (min-width: 600px) {
