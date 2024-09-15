@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <title>Profile | MAhmadS</title>
     <meta
       name="description"
@@ -31,20 +35,20 @@
             <a href="#skills">Skills</a>
           </li>
           <li>
-            <a href="#">Projects</a>
+            <a href="#projects">Projects</a>
           </li>
           <li>
-            <a href="#">Education</a>
+            <a href="#education">Education</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="#contacts">Contact</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section>
+      <section class="embed-video">
         <div>Who Am I ?</div>
         <iframe
           src="https://www.youtube.com/embed/UHwVyplU3Pg?si=wmrUHHrSsemgB1QJ"
@@ -86,11 +90,15 @@
 
       <section id="projects">
         <div>Projects</div>
-        <div></div>
+        <div class="link">
+          <a href="#" target="_blank" rel="noopener noreferrer"
+            >Go to Projects Page</a
+          >
+        </div>
       </section>
 
       <section id="education">
-        <div>Education</div>
+        <div>Education & Short Courses</div>
         <div class="list">
           <h5>BSc. Computer Science</h5>
           <p>Information Technology University of The Punjab</p>
@@ -104,7 +112,21 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer id="contacts">
+      <div class="footer-title">Contact</div>
+      <div class="contact">
+        <span class="material-symbols-outlined"> mail </span>
+        <span>bscs22078@itu.edu.pk</span>
+      </div>
+
+      <div class="footer-title">Author</div>
+      <div class="contact">
+      <span class="material-symbols-outlined">
+        signature
+        </span>
+        <span>Muhammad Ahmad Saleem</span>
+      </div>
+    </footer>
   </body>
   <script src="./index.js"></script>
 </html>
