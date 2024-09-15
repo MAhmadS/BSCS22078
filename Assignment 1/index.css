@@ -50,6 +50,14 @@ main {
 .profile-section img {
   height: 100px;
   width: 100px;
+
+  border-radius: 2em;
+}
+
+q {
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
 }
 
 .navbar ul {
@@ -90,7 +98,7 @@ section {
   overflow: hidden;
 }
 
-section > div:first-child {
+section div:first-child {
   text-align: center;
 
   font-size: large;
@@ -179,9 +187,9 @@ footer {
   background-color: var(--highlight);
 }
 
-.footer-title{
-    font-weight: bold;
-    margin: 1rem 0rem;
+.footer-title {
+  font-weight: bold;
+  margin: 1rem 0rem;
 }
 
 .contact {
@@ -224,9 +232,6 @@ footer {
     height: 160px;
     width: 160px;
   }
-  .embed-video{
-    align-items: center;
-}
   .navbar ul {
     padding: 0.5rem 0;
 
@@ -246,5 +251,16 @@ footer {
   iframe {
     height: 315px;
     width: 520px;
+  }
+  .embed-video {
+    align-items: center;
+  }
+  section div:not(:first-child):not(.panel) {
+    align-self: center;
+    width: 80%;
+  }
+  section span {
+    align-self: center;
+    width: 80%;
   }
 }
