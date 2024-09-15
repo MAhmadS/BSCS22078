@@ -101,6 +101,58 @@ iframe{
     width: 100%;
 }
 
+.skills > div:not(:first-child){
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.accordion-btn {
+    color: var(--secondary);
+
+    font-family: inherit;
+    font-weight: 600;
+    
+    background-color: var(--highlight);
+    cursor: pointer;
+
+    padding: 1rem;
+    width: 100%;
+
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .accordion-btn:after {
+    content: '\02795';
+
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796";
+  }
+  
+  .panel {
+    padding: 0 1rem;
+
+    font-weight: 500;
+    font-size: medium;
+
+    background-color: transparent;
+    border: 2px solid var(--highlight);
+
+    display: none;
+    overflow: hidden;
+  }
+
+  .panel p{
+    margin: 0;
+    padding: 0.25rem;
+    border-bottom: 1px solid var(--highlight);
+  }
+
 @media (min-width:600px) {
     header{
         background-size: cover;
