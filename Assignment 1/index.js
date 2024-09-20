@@ -6,6 +6,7 @@ const skillData = [
       "C/C++",
       "Python",
       "HTML/CSS/Javascript",
+      "React/Express Basics",
       "SQL",
       "Assembly Language",
     ],
@@ -63,7 +64,7 @@ for (let i = 0; i < accordionBtns.length; i++) {
   });
 }
 
-//educations
+//education
 const educationData = [
   {
     title: "BSc. Computer Science",
