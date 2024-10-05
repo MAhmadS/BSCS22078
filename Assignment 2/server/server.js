@@ -2,6 +2,7 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
+const fastcsv = require("fast-csv");
 
 const app = express();
 const port = 3001;
@@ -23,6 +24,15 @@ app.use(setCorsHeaders);
 // i used get because i dont need to send body object and also because of semantic.
 app.get("/hello/amjad", (req, res, next) => {
   res.json("Hello, Amjad");
+});
+
+app.get("/allprofiles", (req, res, next) => {
+  const profiles = [];
+  fs.createReadStream(path.join(__dirname, "profile.csv"))
+    .pipe(fastcsv.parse({ headers: true }))
+    .on("data", (row) => profiles.push(row))
+    .on("end", () => res.json(profiles))
+    .on("error", (error) => res.status(500).send("Error reading the CSV file"));
 });
 
 app.post("/profile", (req, res, next) => {
