@@ -20,11 +20,6 @@ app.use(setCorsHeaders);
 
 //handle requests
 
-// i used get because i dont need to send body object and also because of semantic.
-app.get("/hello/amjad", (req, res, next) => {
-  res.json("Hello, Amjad");
-});
-
 // Start the server
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
