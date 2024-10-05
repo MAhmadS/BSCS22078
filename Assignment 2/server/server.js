@@ -25,6 +25,34 @@ app.get("/hello/amjad", (req, res, next) => {
   res.json("Hello, Amjad");
 });
 
+app.post("/profile", (req, res, next) => {
+  const { Name, Title, TargetedKeywords, Education, Certification, Contact } =
+    req.body;
+  if (
+    !(
+      Name &&
+      Title &&
+      TargetedKeywords &&
+      Education &&
+      Certification &&
+      Contact
+    )
+  ) {
+    res.json("Object Does not meet the requirements").status(400);
+  } else {
+    fs.writeFileSync(
+      path.join(__dirname, "profile.json"),
+      JSON.stringify(
+        { Name, Title, TargetedKeywords, Education, Certification, Contact },
+        null,
+        2
+      ),
+      { flag: "a" } // Append to file
+    );
+    res.json("Successfully Received");
+  }
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
