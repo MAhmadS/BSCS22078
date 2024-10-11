@@ -1,5 +1,6 @@
 import React from "react";
 import ReviewCard from "./ReviewCard";
+import Counter from "./Counter";
 
 const Review = () => {
   const reviewItems = [
@@ -33,22 +34,10 @@ const Review = () => {
           ))}
         </div>
         <div className="row counter-row">
-          <div className="col-lg-3 col-md-6 single-counter">
-            <h1 className="counter">2536</h1>
-            <p>Happy Client</p>
-          </div>
-          <div className="col-lg-3 col-md-6 single-counter">
-            <h1 className="counter">7562</h1>
-            <p>Total Projects</p>
-          </div>
-          <div className="col-lg-3 col-md-6 single-counter">
-            <h1 className="counter">2013</h1>
-            <p>Cups Coffee</p>
-          </div>
-          <div className="col-lg-3 col-md-6 single-counter">
-            <h1 className="counter">10536</h1>
-            <p>Total Submitted</p>
-          </div>
+          <Counter item={{ name: "Happy Client", count: 2536 }} />
+          <Counter item={{ name: "Total Projects", count: 7562 }} />
+          <Counter item={{ name: "Cups Coffee", count: 2013 }} />
+          <Counter item={{ name: "Total Submitted", count: 10536 }} />
         </div>
       </div>
     </section>
