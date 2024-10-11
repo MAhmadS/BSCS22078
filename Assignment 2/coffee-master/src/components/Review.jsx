@@ -1,6 +1,21 @@
 import React from "react";
+import ReviewCard from "./ReviewCard";
 
 const Review = () => {
+  const reviewItems = [
+    {
+      name: "lorem ipusm",
+      description:
+        "Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.",
+      stars: 3,
+    },
+    {
+      name: "lorem ipusm",
+      description:
+        "Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.",
+      stars: 2,
+    },
+  ];
   return (
     <section className="review-area section-gap" id="review">
       <div className="container">
@@ -13,44 +28,9 @@ const Review = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-6 col-md-6 single-review">
-            <img src="img/r1.png" alt="" />
-            <div className="title d-flex flex-row">
-              <h4>lorem ipusm</h4>
-              <div className="star">
-                <span className="fa fa-star checked"></span>
-                <span className="fa fa-star checked"></span>
-                <span className="fa fa-star checked"></span>
-                <span className="fa fa-star"></span>
-                <span className="fa fa-star"></span>
-              </div>
-            </div>
-            <p>
-              Accessories Here you can find the best computer accessory for your
-              laptop, monitor, printer, scanner, speaker. Here you can find the
-              best computer accessory for your laptop, monitor, printer,
-              scanner, speaker.
-            </p>
-          </div>
-          <div className="col-lg-6 col-md-6 single-review">
-            <img src="img/r2.png" alt="" />
-            <div className="title d-flex flex-row">
-              <h4>lorem ipusm</h4>
-              <div className="star">
-                <span className="fa fa-star checked"></span>
-                <span className="fa fa-star checked"></span>
-                <span className="fa fa-star"></span>
-                <span className="fa fa-star"></span>
-                <span className="fa fa-star"></span>
-              </div>
-            </div>
-            <p>
-              Accessories Here you can find the best computer accessory for your
-              laptop, monitor, printer, scanner, speaker. Here you can find the
-              best computer accessory for your laptop, monitor, printer,
-              scanner, speaker.
-            </p>
-          </div>
+          {reviewItems.map((item) => (
+            <ReviewCard item={item} />
+          ))}
         </div>
         <div className="row counter-row">
           <div className="col-lg-3 col-md-6 single-counter">

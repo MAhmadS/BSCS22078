@@ -1,6 +1,63 @@
 import React from "react";
+import Card from "./Card";
 
 const Menu = () => {
+  const cardItem = [
+    {
+      name: "Cappuccino",
+      price: "$49",
+      description:
+        "Usage of the Internet is becoming more common due to rapid advance.",
+    },
+    {
+      name: "Americano",
+      price: "$49",
+      description:
+        "Usage of the Internet is becoming more common due to rapid advance.",
+    },
+    {
+      name: "Espresso",
+      price: "$49",
+      description:
+        "Usage of the Internet is becoming more common due to rapid advance.",
+    },
+    {
+      name: "Macchiato",
+      price: "$49",
+      description:
+        "Usage of the Internet is becoming more common due to rapid advance.",
+    },
+    {
+      name: "Mocha",
+      price: "$49",
+      description:
+        "Usage of the Internet is becoming more common due to rapid advance.",
+    },
+    {
+      name: "Coffee Latte",
+      price: "$49",
+      description:
+        "Usage of the Internet is becoming more common due to rapid advance.",
+    },
+    {
+      name: "Piccolo Latte",
+      price: "$49",
+      description:
+        "Usage of the Internet is becoming more common due to rapid advance.",
+    },
+    {
+      name: "Ristretto",
+      price: "$49",
+      description:
+        "Usage of the Internet is becoming more common due to rapid advance.",
+    },
+    {
+      name: "Affogato",
+      price: "$49",
+      description:
+        "Usage of the Internet is becoming more common due to rapid advance.",
+    },
+  ];
   return (
     <section className="menu-area section-gap" id="coffee">
       <div className="container">
@@ -13,114 +70,9 @@ const Menu = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-4">
-            <div className="single-menu">
-              <div className="title-div justify-content-between d-flex">
-                <h4>Cappuccino</h4>
-                <p className="price float-right">$49</p>
-              </div>
-              <p>
-                Usage of the Internet is becoming more common due to rapid
-                advance.
-              </p>
-            </div>
-          </div>
-          <div className="col-lg-4">
-            <div className="single-menu">
-              <div className="title-div justify-content-between d-flex">
-                <h4>Americano</h4>
-                <p className="price float-right">$49</p>
-              </div>
-              <p>
-                Usage of the Internet is becoming more common due to rapid
-                advance.
-              </p>
-            </div>
-          </div>
-          <div className="col-lg-4">
-            <div className="single-menu">
-              <div className="title-div justify-content-between d-flex">
-                <h4>Espresso</h4>
-                <p className="price float-right">$49</p>
-              </div>
-              <p>
-                Usage of the Internet is becoming more common due to rapid
-                advance.
-              </p>
-            </div>
-          </div>
-          <div className="col-lg-4">
-            <div className="single-menu">
-              <div className="title-div justify-content-between d-flex">
-                <h4>Macchiato</h4>
-                <p className="price float-right">$49</p>
-              </div>
-              <p>
-                Usage of the Internet is becoming more common due to rapid
-                advance.
-              </p>
-            </div>
-          </div>
-          <div className="col-lg-4">
-            <div className="single-menu">
-              <div className="title-div justify-content-between d-flex">
-                <h4>Mocha</h4>
-                <p className="price float-right">$49</p>
-              </div>
-              <p>
-                Usage of the Internet is becoming more common due to rapid
-                advance.
-              </p>
-            </div>
-          </div>
-          <div className="col-lg-4">
-            <div className="single-menu">
-              <div className="title-div justify-content-between d-flex">
-                <h4>Coffee Latte</h4>
-                <p className="price float-right">$49</p>
-              </div>
-              <p>
-                Usage of the Internet is becoming more common due to rapid
-                advance.
-              </p>
-            </div>
-          </div>
-          <div className="col-lg-4">
-            <div className="single-menu">
-              <div className="title-div justify-content-between d-flex">
-                <h4>Piccolo Latte</h4>
-                <p className="price float-right">$49</p>
-              </div>
-              <p>
-                Usage of the Internet is becoming more common due to rapid
-                advance.
-              </p>
-            </div>
-          </div>
-          <div className="col-lg-4">
-            <div className="single-menu">
-              <div className="title-div justify-content-between d-flex">
-                <h4>Ristretto</h4>
-                <p className="price float-right">$49</p>
-              </div>
-              <p>
-                Usage of the Internet is becoming more common due to rapid
-                advance.
-              </p>
-            </div>
-          </div>
-          <div className="col-lg-4">
-            <div className="single-menu">
-              <div className="title-div justify-content-between d-flex">
-                <h4>Affogato</h4>
-                <p className="price float-right">$49</p>
-              </div>
-              <p>
-                Usage of the Internet is becoming more common due to rapid
-                advance.
-              </p>
-            </div>
-          </div>
+          {cardItem.map((item) => (
+            <Card item={item} />
+          ))}
         </div>
       </div>
     </section>
